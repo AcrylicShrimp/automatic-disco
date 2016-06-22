@@ -32,13 +32,13 @@ namespace PHs
 		public:
 			BinaryReader();
 			BinaryReader(BinaryReader &&sNewBinaryReader);
-			BinaryReader(const BinaryReader &&sNewBinaryReader) = delete;
+			BinaryReader(const BinaryReader &sNewBinaryReader) = delete;
 			BinaryReader(const std::wstring &sNewPath);
 			~BinaryReader();
 
 		public:
 			BinaryReader &operator=(BinaryReader &&sNewBinaryReader);
-			BinaryReader &operator=(const BinaryReader &&sNewBinaryReader) = delete;
+			BinaryReader &operator=(const BinaryReader &sNewBinaryReader) = delete;
 
 			Void openReader(const std::wstring &sNewPath);
 			Char readCHAR();
